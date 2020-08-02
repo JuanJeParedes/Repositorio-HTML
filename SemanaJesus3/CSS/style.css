@@ -1,0 +1,94 @@
+#barra {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(15, 146, 85);
+    color: violet
+}
+
+li a:hover {
+    background-color: RED;
+}
+
+#logo {
+    float: right;
+    padding-right: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 10px;
+    color: ivory;
+    background-color: lawngreen;
+}
+
+li {
+    float: left;
+    padding: 12px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    padding: 8px 14px;
+    text-align: center;
+}
+
+#imgLogo {
+    width: 100%;
+    height: 600px;
+}
+
+#foto {
+    width: 100%;
+    height: 600px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 10px;
+    color: ivory;
+    background-color: yellowgreen;
+}
+
+#contenedor {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#izquierda {
+    width: 50%;
+    float: left;
+    height: 400px;
+}
+
+#derecha {
+    width: 50%;
+    float: left;
+    height: 400px;
+}
+
+p {
+    text-align: justify;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#about {
+    width: 100%;
+}
+
+footer {
+    color: blueviolet;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px;
+}
