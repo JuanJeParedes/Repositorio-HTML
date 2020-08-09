@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObtenerLaHora</title>
+
+</head>
+
+<body>
+    <p>Click para obtener la hora actual</p>
+    <button onclick="myFunction()">Presiona AQUI </button>
+    <p id="demo"></p>
+
+    <script>
+        function addZero(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        function myFunction() {
+            var d = new Date();
+            //document.write(d);
+            var x = document.getElementById("demo");
+            var h = addZero(d.getHours());
+            var m = addZero(d.getMinutes());
+            var s = addZero(d.getSeconds());
+            x.innerHTML = h + ":" + m + ":" + s;
+        }
+    </script>
+
+</body>
+
+</html>
