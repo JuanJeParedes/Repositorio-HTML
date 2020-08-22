@@ -1,0 +1,23 @@
+{
+ ifFactura : 1, 
+ cliente : 5, 
+ detalleFactura: {
+     [
+         idFactura: 1, 
+         rfc: fghjkjh, 
+
+     ]
+
+ }, 
+ productos : {
+     [{productoid : 1, 
+     cantidad 4, 
+     precioUnitario: 6}, 
+     {
+         productoid: 2, 
+         cantidad 6,
+         precioUnitario: 12
+     }]
+ }
+
+}

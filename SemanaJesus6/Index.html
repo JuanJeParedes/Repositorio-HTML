@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos JavaScript</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="EjemploFor.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>JavaScript & jQuery</h1>
+
+    <table>
+        <tr id="encabezado">
+            <th>0</th>
+            <script>
+                for (var i = 1; i <= 16; i++) {
+                    document.write("<th class='fila'>  " + i + " </th>");
+                }
+            </script>
+        </tr>
+        <script>
+            for (var i = 1; i <= 21; i++) {
+                if ((i % 2) == 0) {
+                    document.write("<tr class='cebra'>");
+                } else {
+                    document.write("<tr >");
+                }
+                document.write("<th class='columna'> " + i + "</th>");
+                for (var j = 1; j <= 16; j++) {
+                    document.write("<td>" + (i * j) + "</td>");
+                }
+                document.write("</tr>")
+
+            }
+        </script>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .text-right {
+            text-align: right;
+        }
+    </style>
+    <title>Factura 2</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr id="filaTitulos">
+                <th>Clave</th>
+                <th>Precio</th>
+                <th>Descripcion</th>
+                <th>Unidades</th>
+                <th>Importe</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" class="clave"></td>
+                <td id=precio1><input type="text" class="precio"></td>
+                <td><input type="text" class="descripcion"></td>
+                <td id=unidades1><input type="text" class="unidades"></td>
+                <td id=importe1><input type="text" class="importe"></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="clave"></td>
+                <td id=precio2><input type="text" class="precio"></td>
+                <td><input type="text" class="descripcion"></td>
+                <td id=unidades2><input type="text" class="unidades"></td>
+                <td id=importe2><input type="text" class="importe"></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="clave"></td>
+                <td><input type="text" class="precio"></td>
+                <td><input type="text" class="descripcion"></td>
+                <td><input type="text" class="unidades"></td>
+                <td id=importe3><input type="text" class="importe"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr id="filaSubtotal">
+                <td class="text-right" colspan="3">Subtotal : $</td>
+                <td class="text-right" id="subtotal">0.0</td>
+
+
+            </tr>
+        </tfoot>
+    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(".precio, .unidades").on("change", function() {
+            var tr = $(this).closest("tr");
+            calcularImporte(tr);
+        });
+
+        function calcularImporte(tr) {
+            var precio = Number($(tr).find(".precio").val());
+            var unidades = Number($(tr).find(".unidades").val());
+            var importe = precio * unidades;
+            var subtotal = importe;
+
+            console.log("El precio es: " + precio);
+            console.log("Las unidades son : " + unidades);
+            console.log("El importe es : " + importe1);
+            console.log("El subtotal es :" + subtotal);
+        }
+    </script>
+
+
+</body>
+
+</html>
