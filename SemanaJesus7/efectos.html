@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efectos con Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+        img {
+            width: 200px;
+        }
+    </style>
+    <script type="text/javascript">
+        //$(variable,selector,objeto,function,metodo, evento).();
+        $(document).ready(function() {
+                    // Quién es el objeto ejecutor
+                    $("#ocultar").click(function() {
+                        // Quién es el que recibe el efecto
+                        $(".himg").hide("fast"); // fast, medium, slow, 0 y 5000
+                    });
+                    //Mostrando las imagenes
+                    $(".himg").show("slow");
+                    //.fade out acccion de salida
+                    $("#fadeout").click(function() {
+                        $(".imgfadeout").fadein("1000");
+                        $("#fadeout").click(function() {
+                            $(".imgfadeout").fadeOut("1000");
+                        });
+                    });
+    </script>
+</head>
+
+<body>
+    <!--
+efectos con Jquery hide, show,fade
+
+
+    -->
+    <table width="100%" border="1px">
+        <tr>
+            <td>Hide</td>
+            <td>Show</td>
+            <td>fadeIn</td>
+            <td>fadeOut</td>
+            <td>slideIn</td>
+            <td>slideOut</td>
+            <td>slideToggle</td>
+            <td>toggle</td>
+        </tr>
+        <tr>
+            <td> <img class="imgfadeout" src=" https://i.pinimg.com/originals/65/68/c5/6568c54b64dde50a421efb622b6903f9.jpg "> </td>
+            <td> <img class="imgfadeout" src=" https://i.pinimg.com/originals/65/68/c5/6568c54b64dde50a421efb622b6903f9.jpg "> </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>
+                <div id="ocultar">Hide</div>
+            </td>
+            <td>
+                <span id="mostrar">Show</span>
+            </td>
+            <td>
+                <span id="fadein">fadeIn</span> fadeIn
+            </td>
+            <td>
+                <span id="fadeout">fadeOut/span>
+            </td>
+            <td>
+                a.slideIn</td>
+            <td>slideOut</td>
+            <td>slideToggle</td>
+            <td>toggle</td>
+        </tr>
+    </table>
+
+</html>
+</body>

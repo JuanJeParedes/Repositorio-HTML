@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Efectos con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style type="text/css">
+        img {
+            width: 150px;
+        }
+        
+        #animacion {
+            background: orange;
+            width: 100px;
+            height: 180px;
+        }
+    </style>
+    <script type="text/javascript">
+        // $(variable,selector,objeto,function,metodo,evento).();
+        $(document).ready(function() {
+            // Quién es el objeto ejecutor
+            $("#ocultar").click(function() {
+                // Quién es el que recibe el efecto
+                $(".himg").hide("fast"); // fast, medium, slow, 0 y 5000
+            });
+            // Mostrando las imágenes
+            $("#mostrar").click(function() {
+                $(".himg").show("slow");
+            });
+            // Fade out accion de salida
+            $("#fadeout").click(function() {
+                $(".imgfadeout").fadeOut("1000");
+            });
+            //
+            $("#fadein").click(function() {
+                $(".imgfadeout").fadeIn("slow");
+            });
+            // Desvanecimiento
+            $("#desvanecer").click(function() {
+                $(".imgslideout").slideUp("medium");
+            });
+            $("#aparecer").click(function() {
+                $(".imgslideout").slideDown("slow");
+            });
+            $("#persiana").click(function() {
+                $(".imgpersiana").slideToggle("slow");
+            });
+            $("#persiana-toggle").click(function() {
+                $(".imgpersianat").toggle("2500");
+            });
+            $("#animacion").click(function() {
+                $("#animacion").animate({
+                        width: "450px",
+                        opacity: 0.25
+                    },
+                    1000, //duracion
+                    //llamada a una funcion
+                    function() {
+                        console.log('se mando a llamar a la function');
+                        alert("Bienvenido");
+
+                    })
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!--
+		Efectos de jQuery hide, show, fadeIn, FadeOut
+		slideIn, slideOut, toggle.
+	-->
+    <table width="100%" border="1px">
+        <!--PRIMER FILA-->
+        <tr>
+            <td>
+                <!--Ajustar imagen a 200px en todas las celdas-->
+                <img class="himg" src="https://www.motofichas.com/images/cache/01-honda-crf250r-2020-perfil-210-150.jpg">
+            </td>
+            <td>
+                <img class="himg" src="https://i.pinimg.com/originals/65/68/c5/6568c54b64dde50a421efb622b6903f9.jpg">
+            </td>
+            <td>
+                <img class="imgfadeout" src="https://i.pinimg.com/originals/65/68/c5/6568c54b64dde50a421efb622b6903f9.jpg">
+            </td>
+            <td>
+                <img class="imgfadeout" src="https://i.pinimg.com/originals/65/68/c5/6568c54b64dde50a421efb622b6903f9.jpg">
+            </td>
+            <td>
+                <img class="imgslideout" src="https://www.diariomotor.com/imagenes/picscache/1920x1600c/audi-q5-2020-ficha_1920x1600c.jpg">
+            </td>
+            <td>
+                <img class="imgslideout" src="data:image/jpeg;base64,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">                </td>
+            <td>
+                <img class="imgpersiana" src="https://www.diariomotor.com/imagenes/picscache/1920x1600c/audi-q5-2020-ficha_1920x1600c.jpg">
+            </td>
+            <td>
+                <img class="imgpersianat" src="https://www.diariomotor.com/imagenes/picscache/1920x1600c/audi-q5-2020-ficha_1920x1600c.jpg">
+
+            </td>
+        </tr>
+        <!--Segunda fila-->
+        <tr>
+            <td>
+                <div id="ocultar">Hide</div>
+            </td>
+            <td>
+                <span id="mostrar">Show</span>
+            </td>
+            <td> <span id="fadein">fadeIn<span></td>
+			<td> <span id="fadeout">fadeOut</span></td>
+            <td>
+                <a href="#" id="aparecer">slideIn</a>
+            </td>
+            <td>
+                <a href="#" id="desvanecer">slideUp</a>
+            </td>
+            <td>
+                <a href="#" id="persiana">slidetoggle</a>
+            </td>
+            <td>
+                <a href="#" id="persiana-toggle">toggle</a>
+            </td>
+        </tr>
+    </table>
+    <!--Fuera de la tabla-->
+    <div id="animacion">
+        aqui va mi animacion con animate;
+
+    </div>
+    <script type="text/javascript">
+    </script>;
+
+    <table>
+        <tr>
+            <th>Imagen</th>
+        </tr>
+        <tr>
+            <td>
+                <!--<a href=https://cdn5.vectorstock.com/i/1000x1000/95/19/firefighter-cartoon-vector-16659519.jpg>ir a bombero</a>-->
+                <img class="imgpersianat" src="https://www.diariomotor.com/imagenes/picscache/1920x1600c/audi-q5-2020-ficha_1920x1600c.jpg">
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <a href="file:///C:/Users/Juan%20Jesus/Desktop/Full%20stack/SemanaJesus7/01_eventos%20(4).html">Refrescar esta pagina</a>
+            </td>
+        </tr>
+
+    </table>
+
+
+</body>
+
+</html>

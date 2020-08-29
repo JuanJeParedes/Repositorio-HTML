@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Efectos con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style type="text/css">
+        img {
+            width: 200px;
+        }
+    </style>
+    <script type="text/javascript">
+        // $(variable,selector,objeto,function,metodo,evento).();
+        $(document).ready(function() {
+                    // Quién es el objeto ejecutor
+                    $("#ocultar").click(function() {
+                        // Quién es el que recibe el efecto
+                        $(".himg").hide("fast"); // fast, medium, slow, 0 y 5000
+                    });
+                    // Mostrando las imágenes
+                    $("#mostrar").click(function() {
+                        $(".himg").show("slow");
+                    });
+                    // Fade out accion de salida
+                    $("#fadeout").click(function() {
+                        $(".imgfadeout").fadeOut("1000");
+                    });
+                    //
+                    $("#fadein").click(function() {
+                        $(".imgfadeout").fadeIn("slow");
+                        //Desvanecimiento
+                    });
+                    $("#desvanecer").click(function() {
+                        $(".imgslideout").slideUp("medium");
+                    });
+                    $("#aparecer").click(function() {
+                        $(".imgslideout").slideDown("slow");
+                    });
+    </script>
+</head>
+
+<body>
+    <!--
+		Efectos de jQuery hide, show, fadeIn, FadeOut
+		slideIn, slideOut, toggle.
+	-->
+    <table width="100%" border="1px">
+        <!--PRIMER FILA-->
+        <tr>
+            <td>
+                <!--Ajustar imagen a 200px en todas las celdas-->
+                <img class="himg" src="https://www.motofichas.com/images/cache/01-honda-crf250r-2020-perfil-210-150.jpg">
+            </td>
+            <td>
+                <img class="himg" src="https://i.pinimg.com/originals/65/68/c5/6568c54b64dde50a421efb622b6903f9.jpg">
+            </td>
+            <td>
+                <img class="imgfadeout" src="https://i.pinimg.com/originals/65/68/c5/6568c54b64dde50a421efb622b6903f9.jpg">
+            </td>
+            <td>
+                <img class="imgfadeout" src="https://i.pinimg.com/originals/65/68/c5/6568c54b64dde50a421efb622b6903f9.jpg">
+            </td>
+            <td>
+                <img class="imgslideout" src="https://www.diariomotor.com/imagenes/picscache/1920x1600c/audi-q5-2020-ficha_1920x1600c.jpg">
+            </td>
+            <td>
+                <img class="imgslideout" src="https://www.diariomotor.com/imagenes/picscache/1920x1600c/audi-q5-2020-ficha_1920x1600c.jpg">
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <div id="ocultar">Hide</div>
+            </td>
+            <td>
+                <span id="mostrar">Show</span>
+            </td>
+            <td> <span id="fadein">fadeIn<span></td>
+			<td> <span id="fadeout">fadeOut</span></td>
+            <td>
+                <a href="#" id="aparecer">slideDown</a>
+            </td>
+            <td>
+                <a href="#" id="desvanecer">slideUp</a>
+            </td>
+            <td>slideToggle</td>
+            <td>toggle</td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
