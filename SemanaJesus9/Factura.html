@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Factura</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <style>
+        .text-right {
+            text-align: right;
+        }
+        
+        #filaTitulos th {
+            border-bottom: 2px solid gray;
+        }
+        
+        #filaSubtotal td {
+            border-top: 1px solid darkgray;
+        }
+        /********/
+        
+        #tablaPartidas {
+            width: 100%;
+        }
+        
+        tr {
+            text-align: center;
+        }
+        
+        #tablaPartidas input {
+            width: 95%;
+        }
+        
+        #partidas .ui-icon-arrowthick-2-n-s {
+            cursor: move;
+        }
+        
+        .eliminar {
+            width: 15px;
+            height: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="acordion">
+        <h3>Detalle de facturación</h3>
+        <div>
+            <table>
+                <tr>
+                    <td><label for="nombre">Nombre</label></td>
+                    <td><input id="nombre" type="text" /></td>
+                </tr>
+                <tr>
+                    <td><label for="rfc">RFC</label></td>
+                    <td><input id="rfc" type="text" /></td>
+                </tr>
+                <tr>
+                    <td><label for="direccion">Dirección</label></td>
+                    <td><input id="direccion" type="text" /></td>
+                </tr>
+                <tr>
+                    <td><label for="fecha">Fecha</label></td>
+                    <td><input id="fecha" type="text" /></td>
+                </tr>
+            </table>
+        </div>
+        <h3>Partidas</h3>
+        <div>
+            <button id="agregar">Agregar</button>
+            <table id="tablaPartidas">
+                <thead>
+                    <tr id="filaTitulos">
+                        <th><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></th>
+                        <th>Clave</th>
+                        <th>Precio</th>
+                        <th>Unidades</th>
+                        <th>Importe</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="partidas">
+                </tbody>
+                <tfoot>
+                    <tr id="filaSubtotal">
+                        <td class="text-right" colspan="4">Subtotal: $</td>
+                        <td class="text-right" id="subtotal">0.00</td>
+                    </tr>
+                    <tr>
+                        <td class="text-right" colspan="4">I.V.A.: $</td>
+                        <td class="text-right" id="iva">0.00</td>
+                    </tr>
+                    <tr>
+                        <td class="text-right" colspan="4">Total: $</td>
+                        <td class="text-right" id="total">0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <div id="dialog" title="Productos">
+        <table border="1">
+            <tr>
+                <th>Clave</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+            </tr>
+            <tr class="articulo">
+                <td class="claveArticulo">A408</td>
+                <td class="nombreArticulo">Televisor Samsung 32''</td>
+                <td class="precioArticulo">6000</td>
+            </tr>
+
+            <tr class="articulo">
+                <td class="claveArticulo">A508</td>
+                <td class="nombreArticulo">Televisor Samsung 50''</td>
+                <td class="precioArticulo">11000</td>
+            </tr>
+            <tr class="articulo">
+                <td class="claveArticulo">B341</td>
+                <td class="nombreArticulo">Refrigerador LG</td>
+                <td class="precioArticulo">8999</td>
+            </tr>
+            <tr class="articulo">
+                <td class="claveArticulo">E223</td>
+                <td class="nombreArticulo">Estufa Mabe</td>
+                <td class="precioArticulo">4289</td>
+            </tr>
+            <tr class="articulo">
+                <td class="claveArticulo">B341</td>
+                <td class="nombreArticulo">Licuadora Phillips</td>
+                <td class="precioArticulo">887</td>
+            </tr>
+            <tr class="articulo">
+                <td class="claveArticulo">M333</td>
+                <td class="nombreArticulo">Microondas Panasonic</td>
+                <td class="precioArticulo">1821</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script>
+        /***********************jQuery UI****************/
+
+
+        $("#acordion").accordion({
+            collapsible: true,
+            heightStyle: "content"
+        });
+
+        $("#partidas").sortable();
+
+        $("#fecha").datepicker({
+            minDate: "0",
+            maxDate: "+2w"
+        });
+
+        $("#dialog").dialog({
+            autoOpen: false,
+            modal: true
+        });
+
+
+        /************************************************/
+    </script>
+    <script src="Factura.js"></script>
+</body>

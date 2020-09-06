@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+table {
+    margin: auto;
+    width: 60%;
+}
+
+td,
+th {
+    padding: 10px;
+    text-align: center;
+}
+
+tr.cebra {
+    background-color: darkcyan;
+}
+
+tr:not(#encabezado):hover {
+    background-color: dimgray;
+    cursor: pointer;
+}
+
+th.columna {
+    border-left: 2px solid #999;
+    border-right: 1px solid #1111;
+}

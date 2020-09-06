@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .text-right {
+            text-align: right;
+        }
+        
+        img {
+            width: 15px;
+            height: 15px;
+        }
+    </style>
+    <title>Factura</title>
+</head>
+
+<body><button id="Agregar">Anadir Partida</button>
+    <table>
+        <thead>
+            <tr id="filaTitulos">
+                <th>Clave</th>
+                <th>Precio</th>
+                <th>Descripcion</th>
+                <th>Unidades</th>
+                <th>Importe</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="partidas"></tbody>
+        <tfoot>
+            <tr id="filaSubtotal">
+                <td class="text-right" colspan="3">Subtotal: $</td>
+                <td class="text-right" id="subtotal">0.0</td>
+            </tr>
+            <tr id="filaIva">
+                <td class="text-right" colspan="3">Iva: $</td>
+                <td class="text-right" id="iva">0.0</td>
+            </tr>
+            <tr id="filaTotal">
+                <td class="text-right" colspan="3">total: $</td>
+                <td class="text-right" id="total">0.0</td>
+            </tr>
+        </tfoot>
+    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="Factura.js"></script>
+</body>
+
+</html>

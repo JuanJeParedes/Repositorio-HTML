@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Factura Jesus</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <style>
+        .text-right {
+            text-align: right;
+        }
+        
+        #filaTitulos th {
+            border-bottom: 2px solid gray;
+        }
+        
+        #filaSubtotal td {
+            border-top: 1px solid darkgray;
+        }
+        /******/
+        
+        #tablaPartidas {
+            width: 100%;
+        }
+        
+        tr {
+            text-align: center;
+        }
+        
+        #tablaPartidas tr {
+            width: 150px;
+        }
+        
+        #partidas .ui-icon-arrowthick-2-n-s {
+            cursor: move;
+        }
+        
+        .eliminar {
+            width: 15px;
+            height: 15px;
+        }
+    </style>
+    <title>Factura</title>
+</head>
+
+<body>
+    </div id="acordion">
+    <h3>Detalle de Facturación</h3>
+    <div>
+        <div>
+            <table>
+                <tr>
+                    <td><label for="nombre" Nombre :></label></td>
+                    <td><input id="nombre" type="text" /></td>
+
+                </tr>
+                <tr>
+                    <td><label for="rfc" RFC :></label></td>
+                    <td><input id="rfc" type="text" /></td>
+
+                </tr>
+                <tr>
+                    <td><label for="direccion">Direccion</label></td>
+                    <td><input id="direccion" type="text" /></td>
+
+                </tr>
+                <tr>
+                    <td><label for="fecha>" Fecha :></label>
+                        <td><label for="fecha">input type="text"</label></td>
+                    </td>
+                </tr>
+
+            </table>
+            <button>Open Dialog</button>
+            <title>jQuery UI Dialog - Animation</title>
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+            <link rel="stylesheet" href="/resources/demos/style.css">
+            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            <script>
+                $(function() {
+                    $("#dialog").dialog({
+                        autoOpen: false,
+                        show: {
+                            effect: "blind",
+                            duration: 1000
+                        },
+                        hide: {
+                            effect: "explode",
+                            duration: 1000
+                        }
+                    });
+
+                    $("#opener").on("click", function() {
+                        $("#dialog").dialog("open");
+                    });
+                });
+            </script>
+
+        </div>
+
+    </div>
+
+
+    <div>
+        <button id="Agregar">Anadir Partida</button>
+
+        <table id="TablaPartidas">
+            <thead>
+                <tr id="filaTitulos">
+                    <th>Clave</th>
+                    <th>Precio</th>
+                    <th>Descripcion</th>
+                    <th>Unidades</th>
+                    <th>Importe</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="partidas"></tbody>
+            <tfoot>
+                <tr id="filaSubtotal">
+                    <td class="text-right" colspan="3">Subtotal: $</td>
+                    <td class="text-right" id="subtotal">0.0</td>
+                </tr>
+                <tr id="filaIva">
+                    <td class="text-right" colspan="3">Iva: $</td>
+                    <td class="text-right" id="iva">0.0</td>
+                </tr>
+                <tr id="filaTotal">
+                    <td class="text-right" colspan="3">total: $</td>
+                    <td class="text-right" id="total">0.0</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="Factura.js"></script>
+    <script>
+        $("#accordion").accordion({
+            collapsible: true,
+            heighStyle: "content"
+        });
+    </script>
+    </div>
+</body>
+
+</html>

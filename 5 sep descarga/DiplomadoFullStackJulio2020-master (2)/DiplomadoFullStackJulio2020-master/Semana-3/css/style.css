@@ -1,0 +1,81 @@
+#barra {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+}
+
+li {
+    float: left;
+    padding: 12px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    padding: 8px 14px;
+    text-align: center;
+}
+
+li a:hover {
+    background-color: gray;
+}
+
+#logo {
+    float: right;
+    padding-right: 50px;
+}
+
+#imgLogo {
+    width: 100%;
+    height: 600px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 10px;
+    color: ivory;
+    background-color: #000000;
+}
+
+#contenedor {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#izquierda {
+    width: 50%;
+    float: left;
+    height: 400px;
+}
+
+#derecha {
+    width: 50%;
+    float: left;
+    height: 400px;
+}
+
+p {
+    text-align: justify;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#about {
+    width: 100%;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px;
+}
